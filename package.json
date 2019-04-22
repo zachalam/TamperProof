@@ -1,0 +1,21 @@
+{
+  "name": "tamperproof",
+  "version": "1.0.0",
+  "description": "MongoDB link to EOS blockchain.",
+  "main": "lib/main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "mongodb",
+    "eos",
+    "blockchain"
+  ],
+  "author": "Zach Alam",
+  "license": "MIT",
+  "dependencies": {
+    "minimist": "^1.2.0",
+    "mongodb": "^3.2.3",
+    "object-hash": "^1.3.1"
+  }
+}
