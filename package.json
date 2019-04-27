@@ -1,5 +1,5 @@
 {
-  "name": "tamperproof",
+  "name": "mproof",
   "version": "1.0.0",
   "description": "MongoDB link to EOS blockchain.",
   "main": "lib/app.js",
