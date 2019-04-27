@@ -1,6 +1,6 @@
 #!/bin/bash
 
-node lib/main.js \
+./tamperproof-macos \
 -d lol \
 -c winter \
 -u mongold \
