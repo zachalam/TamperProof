@@ -3,7 +3,7 @@
 A utility that conveniently links MongoDB to EOS blockchains.
 
 ## Motive
-Blockchains provide security and transparency. Unfortunately it's very difficult for existing applications to take advantage of the benefits they offer. We're migrating towards a world where the public does not trust verifiable data sources. With **TamperProof**, anyone can prove the state of their MongoDB database by fingerprinting it on a EOS powered blockchain.
+Blockchains provide security and transparency. Unfortunately it's very difficult for existing applications to take advantage of the benefits they offer. We're migrating towards a world where the public will not trust unverifiable data sources. With **TamperProof**, anyone can prove the state of their MongoDB database by fingerprinting it on a EOS powered blockchain.
 
 ![TamperProof Process](https://github.com/zachalam/TamperProof/blob/master/images/process.png?raw=true)
 
@@ -36,17 +36,18 @@ tamperproof \
 
 ## Sample Result
 ```
-Using identifier. ["my_db","a_collection","5cbba8a857a66431e9bb2164"]
-"Identifier" hash generated: d3c1cd112a74e8048131bca20ddc40d40481664b7ef73f2a778ae407bdc1a1dd
+Identifier: ["my_mongo_db","predictions"]
+=> 0adb7441e30f6970596a759a80114f748ea53da2ac5dcb5f99925762243dd890 (identifier)
+-------------------------------------
 Talking to MongoDB...
-Number of documents in Hash: 1
-[{"_id":"5cbba8a857a66431e9bb2164","name":"Zach","birth_year":"2050"}]
-"Data" hash generated: 5bfcbba66dc024a850865a7b8716d18d69d9b45188842f6bf1792f32c61b9cda
-==============================
+Number of documents in Hash: 2
+[{"_id":"5cc5e16c57a66431e9bb217c","home_team":"Eagles","away_team":"Bobcats","prediction":"10-0","winning_team":"Eagles","gametime":"10-03-2020 @ 10:00PM"},{"_id":"5cc5e2104cb78c31e97ebee2","home_team":"Tigers","away_team":"Bears","prediction":"20-15","winning_team":"Tigers","gametime":"10-05-2020 @ 10:00PM"}]
+=> 66407328a8492ad22f3a526476059810512e9f65ab012bf7410a31579ec12e7e (data)
+-------------------------------------
 Writing to Blockchain...
 Successfully wrote to chain with TX id.
-=> 5cd534d252ad380e92c26a5c119918865e42ab400b880d9cafc2b9d308da1fa5
-https://bloks.io/transaction/5cd534d252ad380e92c26a5c119918865e42ab400b880d9cafc2b9d308da1fa5
+=> 70c99fc7aa16f33f1f49a6f68bded1ec08a4ccc5f5b4c1dabc27bd3021276f46
+https://bloks.io/transaction/70c99fc7aa16f33f1f49a6f68bded1ec08a4ccc5f5b4c1dabc27bd3021276f46
 ```
 
 ## Interpreting Results

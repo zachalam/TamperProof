@@ -1,6 +1,6 @@
 {
   "name": "tamperproof",
-  "version": "1.0.15",
+  "version": "1.0.16",
   "description": "MongoDB link to EOS blockchain.",
   "main": "lib/incl.js",
   "bin": {
