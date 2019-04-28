@@ -37,11 +37,11 @@ tamperproof \
 ==============================
 TamperProof => by Zach Alam
 ==============================
-Using identifier. ["lol","winter","5cbba8a857a66431e9bb2164"]
+Using identifier. ["my_db","a_collection","5cbba8a857a66431e9bb2164"]
 "Identifier" hash generated: d3c1cd112a74e8048131bca20ddc40d40481664b7ef73f2a778ae407bdc1a1dd
 Accessing Mongo records...
 Number of documents in Hash: 1
-[{"_id":"5cbba8a857a66431e9bb2164","yes":"true","no":"blue1"}]
+[{"_id":"5cbba8a857a66431e9bb2164","name":"Zach","birth_year":"2050"}]
 "Data" hash generated: 5bfcbba66dc024a850865a7b8716d18d69d9b45188842f6bf1792f32c61b9cda
 ==============================
 Writing to blockchain...
@@ -50,8 +50,13 @@ Successfully wrote to chain with TX id.
 https://bloks.io/transaction/5cd534d252ad380e92c26a5c119918865e42ab400b880d9cafc2b9d308da1fa5
 ```
 
+## Interpreting Results
+Both the "identifier" and the "data" properties are hashed with SHA256.
+* The identifier is a hash of an array converted to a string. The array is one of the following formats: ["database","collection"] or ["database","collection","_id"]
+* The data is a hash of a string of the Result returned from the database. This string is created by passing the DB result to JSON.stringify().
+
+
 ## Parameters
-Note: Sensitive parameters should be stored as session data and not passed via command line.
 | Parameter | Example                                                | Purpose                                | Required |
 |-----------|--------------------------------------------------------|----------------------------------------|----------|
 | -x        | mongodb+srv://<user>:<pass>@cluster0-bwwwb.mongodb.net | MongoDB connection string.             | YES      |
@@ -61,3 +66,5 @@ Note: Sensitive parameters should be stored as session data and not passed via c
 | -k        | 5J7J5tD9WrKWAkAVyXLNonh2WcVqWBXxajmMthDPTuJbBksDhyz    | EOSIO private key (active permission). | YES      |
 | -a        | useraccount1                                           | EOSIO account name.                    | YES      |
 | -e        | https://publicapi-mainnet.eosauthority.com             | EOSIO http endpoint.                   | No       |
+
+* Note: Sensitive parameters should be stored as session data and not passed via command line.
