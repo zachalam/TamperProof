@@ -1,6 +1,6 @@
 ![TamperProof Logo](https://github.com/zachalam/TamperProof/blob/master/images/logo.png?raw=true)
 
-A library and utility to conveniently link your MongoDB to EOS blockchains.
+A utility that conveniently links MongoDB to EOS blockchains.
 
 ## Motive
 Blockchains provide security and transparency. Unfortunately it's very difficult for existing applications to take advantage of the benefits they offer. We're migrating towards a world where the public does not trust verifiable data sources. With **TamperProof**, anyone can prove the state of their MongoDB database by fingerprinting it on a EOS powered blockchain.
@@ -68,6 +68,22 @@ Both the "identifier" and the "data" properties are hashed with SHA256.
 
 * Note: Sensitive parameters should be stored as session data and not passed via command line.
 
+## Use Programatically
+```
+let tamperproof = require("tamperproof")
+
+;(async () => {
+  let result = await tamperproof({
+    d: "my_database_name",
+    c: "my_collection_name",
+    i: "5cbba8a857a66431e9bb2164",
+    x: "mongodb+srv://<user>:<pass>@cluster0-bwwwb.mongodb.net",
+    a: "useraccount1",
+    k: "5J7J5tD9WrKWAkAVyXLNonh2WcVqWBXxajmMthDPTuJbBksDhyz",
+    e: "https://publicapi-mainnet.eosauthority.com" // endpoint required.
+  })
+})()
+```
 
 ## Acquire Blockchain Account
 Accounts are free on private EOS blockchains. If you wish to use the public EOS blockchain (default setting) there is a small one-time fee (typically ~$1). This will provide you with both a private key and account name of your choice (-k and -a params). 
