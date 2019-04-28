@@ -1,4 +1,4 @@
-![TamperProof Logo](https://github.com/zachalam/TamperProof/blob/master/images/logo_white.png?raw=true)
+![TamperProof Logo](https://github.com/zachalam/TamperProof/blob/master/images/logo.png?raw=true)
 
 Hash MongoDB Documents on EOS blockchains.
 
@@ -36,9 +36,6 @@ tamperproof \
 
 ## Sample Result
 ```
-==============================
-TamperProof => by Zach Alam
-==============================
 Using identifier. ["my_db","a_collection","5cbba8a857a66431e9bb2164"]
 "Identifier" hash generated: d3c1cd112a74e8048131bca20ddc40d40481664b7ef73f2a778ae407bdc1a1dd
 Accessing Mongo records...
@@ -70,3 +67,10 @@ Both the "identifier" and the "data" properties are hashed with SHA256.
 | -e        | https://publicapi-mainnet.eosauthority.com             | EOSIO http endpoint.                   | No       |
 
 * Note: Sensitive parameters should be stored as session data and not passed via command line.
+
+
+## Acquire Blockchain Account
+Accounts are free on private EOS blockchains. If you wish to use the public EOS blockchain there is a small one-time fee (typically ~$1). This will provide you with both a private key and account name of your choice (-k and -a params). 
+
+[https://www.eosnameservice.io](https://www.eosnameservice.io/?ref=zachzachzach)
+
