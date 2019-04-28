@@ -1,13 +1,35 @@
 ![TamperProof Logo](https://github.com/zachalam/TamperProof/blob/master/images/logo_white.png?raw=true)
 
-Hash MongoDB Collections or Documents on EOSIO blockchains.
+Hash MongoDB Documents on EOS blockchains.
 
 ## Motive
-Blockchains provide security and transparency. Unfortunately it's very difficult for existing applications to take advantage of the bennefits they offer. In the future, the public at large will not trust data sources that cannot be proven. With **TamperProof**, anyone can prove the state of their MongoDB state by stamping it on any EOSIO powered blockchain.
+Blockchains provide security and transparency. Unfortunately it's very difficult for existing applications to take advantage of the benefits they offer. In the future, the public at large will not trust data sources that cannot be proven. With **TamperProof**, anyone can prove the state of their MongoDB database by finger printing it on _any_ EOS powered blockchain.
+
+## Installation
+```
+npm i -g tamperproof
+```
 
 ## Usage
+Hash a 'single' document.
 ```
-tamperproof
+tamperproof \
+-d database_name \
+-c collection_name \
+-x mongodb+srv://mongodb_connection_string \
+-i 5cbba8a857a66431e9bb2164 \
+-a accountuser1 \
+-k 5J7J5tD9WrKWAkAVyXLNonh2WcVqWBXxajmMthDPTuJbBksDhyz
+```
+
+Hash a 'whole' collection.
+```
+tamperproof \
+-d database_name \
+-c collection_name \
+-x mongodb+srv://mongodb_connection_string \
+-a accountuser1 \
+-k 5J7J5tD9WrKWAkAVyXLNonh2WcVqWBXxajmMthDPTuJbBksDhyz
 ```
 
 ## Parameters
