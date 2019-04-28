@@ -1,3 +1,5 @@
+![TamperProof Logo](https://github.com/zachalam/TamperProof/blob/master/images/logo_white.png?raw=true)
+
 Hash MongoDB Collections or Documents on EOSIO blockchains.
 
 ## Motive
