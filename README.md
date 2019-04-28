@@ -5,6 +5,8 @@ Hash MongoDB Documents on EOS blockchains.
 ## Motive
 Blockchains provide security and transparency. Unfortunately it's very difficult for existing applications to take advantage of the benefits they offer. In the future, the public at large will not trust data sources that cannot be proven. With **TamperProof**, anyone can prove the state of their MongoDB database by finger printing it on _any_ EOS powered blockchain.
 
+![TamperProof Process](https://github.com/zachalam/TamperProof/blob/master/images/process.png?raw=true)
+
 ## Installation
 ```
 npm i -g tamperproof
