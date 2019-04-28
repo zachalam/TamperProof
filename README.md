@@ -1,11 +1,11 @@
 Hash MongoDB Collections or Documents on EOSIO blockchains.
 
 ## Motive
-Blockchains provide security and transparency. Unfortunately it's very difficult for existing applications to take advantage of the bennefits they offer. In the future, the public at large will not trust data sources that cannot be proven. With *mproof*, anyone can prove the state of their MongoDB state by stamping it on any EOSIO powered blockchain.
+Blockchains provide security and transparency. Unfortunately it's very difficult for existing applications to take advantage of the bennefits they offer. In the future, the public at large will not trust data sources that cannot be proven. With **TamperProof**, anyone can prove the state of their MongoDB state by stamping it on any EOSIO powered blockchain.
 
 ## Usage
 ```
-mproof
+tamperproof
 ```
 
 ## Parameters
