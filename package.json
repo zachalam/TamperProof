@@ -1,10 +1,10 @@
 {
   "name": "tamperproof",
-  "version": "1.0.9",
+  "version": "1.0.11",
   "description": "MongoDB link to EOS blockchain.",
   "main": "lib/app.js",
   "bin": {
-    "tamperproof": "lib/app.js"
+    "tamperproof": "lib/cli.js"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
